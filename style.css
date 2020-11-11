@@ -1,0 +1,444 @@
+:root {
+  --valorant-red: rgba(185, 33, 33, 0.9);
+  --valorant-green: rgba();
+}
+
+* {
+  font-family: 'Bebas Neue', monospace;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+#header {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 5px;
+  position: fixed;
+  top: 0;
+  min-height: 75px;
+  width: 100%;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+}
+
+@media (max-width: 500px) {
+  header {
+    flex-wrap: wrap;
+  }
+}
+
+#header-img {
+  width: 100px;
+  display: block;
+  padding: 1.5rem;
+  transition: ease-in-out, filter .35s ease-in-out; 
+}
+
+#header-img:hover {
+  filter: drop-shadow(4px 4px 0px var(--valorant-red));
+}
+
+.navigation > li {
+  width: auto;
+  margin: 10px;
+}
+
+@media (max-width: 500px) {
+  nav {
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+}
+
+nav > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  text-align: center;
+}
+
+
+@media (max-width: 500px) {
+  nav > ul {
+    flex-direction: column;
+  }
+  .container {
+    margin: 100px;
+  }
+}
+
+.nav-link {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--valorant-red);
+}
+
+#featured {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.video-background {
+  pointer-events: none;
+  opacity: 0.7;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  z-index: -99;
+}
+
+.video-background iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  z-index: -99;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-background iframe {
+    /* height = 100 * (9 / 16) = 56.25 */
+    height: 56.25vw;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-background iframe {
+    /* width = 100 / (9 / 16) = 177.777777 */
+    width: 177.78vh;
+  }
+}
+
+.container {
+  position: relative;
+  height: 50px;
+  width: 100%;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  width: 90vw;
+  padding: 10px;
+  margin: 10vh auto 0 auto;
+  text-shadow: 3px 3px var(--valorant-red);
+  background-color: rgba(255,255,255,0.9);
+  
+}
+
+#title {
+  font-size: 20vw;
+  transition: ease-in-out, font-size .35s ease-in-out;
+}
+
+#title:hover {
+  font-size: 21vw;
+}
+
+#page-wrapper {
+  position: relative;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#email {
+  max-width: 275px;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  outline: none;
+  transition: ease-in-out, width .35s ease-in-out;
+
+}
+
+#email:focus {
+  border-color: var(--valorant-red);
+  width: 250px;
+}
+
+.btn {
+  margin: 40px;
+  font-size: 1em;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border: 0px;
+  transition: ease-in-out, background-color .35s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--valorant-red);
+  color: black;
+}
+
+#featured {
+  background-color: var(--valorant-red);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 90vw;
+  padding: 20px;
+  margin: 10vh auto 0 auto;
+  
+}
+
+#feature-header {
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 3px 3px var(--valorant-red);
+  background-color: rgba(255,255,255,0.8);
+  padding: 10px 20px 10px 20px;
+  margin-top: 20px;
+  width: auto;
+  transition: ease-in-out, background-color .35s ease-in-out;
+}
+
+#feature-header:hover {
+  background-color: black;
+  color: rgba(255,255,255,0.95);
+  
+}
+
+#jett-feature {
+  width: 50vw;
+  height: auto;
+  margin: 20px;
+  z-index: 0;
+  filter: drop-shadow(5px 5px 5px #222);
+}
+
+#jett-desc {
+  padding: 10px 40px 10px 40px;
+  color: rgba(255,255,255,0.85);
+}
+
+#christmas-special-countdown {
+  display: flex;
+  flex-direction: row;
+}
+
+
+#reaver {
+  position: relative;
+  background-image: url("https://valorantskins.com/img/bundles/reaver/reaver-skins-collection.png");
+  width: 90vw;
+  height: 60vh;
+  color: rgba(255,255,255,0.9);
+  text-align: left;
+  padding: 20px;
+  margin: 20px;
+  border: 1.5px solid rgba(255,255,255,0.95);
+  border-style: groove;
+}
+
+#reaver > h2 {
+  font-size: 50px;
+}
+
+#price {
+  color: rgba(255,255,255,0.9);
+  padding: 5px 30px 5px 30px;
+  background-color: rgba(132, 194, 157, 0.95);
+  border: 1px solid rgba(255,255,255,0);
+  transition: ease-in-out, border .35s ease-in-out;
+  position:absolute;                  
+  bottom:2rem;                          
+  right:2rem;
+  cursor: pointer;
+}
+
+#price:hover {
+  border: 1px solid rgba(240, 252, 169, 0.95);
+}
+
+.offers-links {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+#offers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(53, 70, 97, 0.8);
+  margin: 10vh 20px 3vh 20px;
+}
+
+#offers-container {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 650px) {
+  #offers-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.offers-div {
+  position: relative;
+  padding: 20px;
+  height: 25vh;
+  width: 20vw;
+  color: rgba(255,255,255,0.9);
+  border-bottom: 3px solid rgba(0,0,0,0);
+  justify-content: center;
+    
+}
+
+
+#spline {
+  background-color: rgba(77, 36, 89, 0.95);
+  transition-property: background-color, border-bottom;
+  transition-duration: 0.55s;
+  transition-timing-function: ease-in-out;
+}
+
+#spline:hover {
+  background-color: rgba(87,46,110,0.95);
+  border-bottom: 3px solid rgba(240, 252, 169, 0.95);
+}
+
+#avalanche {
+  background-color: rgba(41, 84, 43, 0.95);
+  transition-property: background-color, border-bottom;
+  transition-duration: 0.55s;
+  transition-timing-function: ease-in-out;
+}
+
+#avalanche:hover{
+  background-color: rgba(41,100,43,0.95);
+  border-bottom: 3px solid rgba(240, 252, 169, 0.95);
+}
+
+#rush { 
+  background-color: rgba(36, 46, 94, 0.95);
+  transition-property: background-color, border-bottom;
+  transition-duration: 0.55s;
+  transition-timing-function: ease-in-out;
+}
+
+#rush:hover {
+  background-color: rgba(36,46,120,0.95);
+  border-bottom: 3px solid rgba(240, 252, 169, 0.95);
+}
+
+#oni {
+  background-color: rgba(77, 36, 89, 0.95);
+  transition-property: background-color, border-bottom;
+  transition-duration: 0.55s;
+  transition-timing-function: ease-in-out;
+}
+
+#oni:hover {
+  background-color: rgba(87,46,110,0.95);
+  border-bottom: 3px solid rgba(240, 252, 169, 0.95);
+}
+
+#newyear-div {
+  display: flex;
+  flex-direction: row;
+  color: rgba(255,255,255,0.95);
+  padding: 5px 10px 5px 10px;
+  font-size: 25px;
+  text-shadow: 3px 3px rgba(35,0,35,0.65);
+}
+
+.skin-price {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+}
+
+#credit-purchase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+#credit-purchase-div {
+  width: 90vw;
+  background-color: var(--valorant-red);
+  text-align: center;
+  padding: 40px 20px 20px 20px;
+}
+
+#credit-code {
+  max-width: 275px;
+  width: 100%;
+  padding: 8px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.78);
+  border: none;
+  transition: ease-in-out, outline .35s ease-in-out;
+}
+
+#credit-code:focus {
+  outline: 5px solid black;
+}
+
+#credit-btn {
+  margin: 40px;
+  font-size: 1em;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border: 0px;
+  transition: ease-in-out, background-color .35s ease-in-out;
+}
+
+#credit-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+#shameless-self-plug {
+  transition: ease-in-out, color .55s ease-in-out;
+}
+
+#shameless-self-plug:hover {
+  color: var(--valorant-red);
+}
